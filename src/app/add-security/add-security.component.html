@@ -1,0 +1,56 @@
+<app-navbar></app-navbar>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" >
+            <div class="row g-3">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Name:</label>
+                    <input placeholder="Enter Security Name"type="text" class="form-control" name="securityName" [(ngModel)]="securityName">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Security Id:</label>
+                    <input placeholder="Enter Security Id:"type="text" class="form-control" name="securityId" [(ngModel)]="securityId">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Phone No:</label>
+                    <input placeholder="Enter Phone No"type="text" class="form-control" name="securityPhone" [(ngModel)]="securityPhone">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Date of Birth:</label>
+                    <input placeholder="Enter your Date of Birth"type="date" name="securityDob" class="form-control"id=""[(ngModel)]="securityDob">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">Address:</label>
+                    <textarea name="Address" class="form-control"id="" cols="30" rows="10"[(ngModel)]="securityAddress"></textarea>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Date of Joining:</label>
+                    <input placeholder="Enter your Date of Joining"type="date" name="securityDoj" class="form-control"id=""[(ngModel)]="securityDoj">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Year Of Experience:</label>
+                    <input placeholder="Enter Year Of Experience"type="text" class="form-control" name="securityYOE" [(ngModel)]="securityYOE">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Email ID:</label>
+                   <input placeholder="Enter your Email ID"type="email" name="securityEmail" id="" class="form-control"[(ngModel)]="securityEmail">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">Password:</label>
+                    <input placeholder="Enter your Password"type="password" name="securityPassword" id="" class="form-control"[(ngModel)]="securityPassword">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">Confirm Password:</label>
+                    <input placeholder="Enter your confirm password"type="password" name="cpassword" id="" class="form-control"[(ngModel)]="cpassword">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <br>
+                        <button class="btn btn-success" type="button" (click)="readAddSecurity()">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
