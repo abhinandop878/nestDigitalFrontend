@@ -12,6 +12,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { EmployeeLoginComponent } from './employee-login/employee-login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AddSecurityComponent } from './add-security/add-security.component';
+import { ViewdeleteEmployeeComponent } from './viewdelete-employee/viewdelete-employee.component';
 const appRoutes:Routes=[
   {
     path:"",component:EmployeeLoginComponent
@@ -24,6 +25,9 @@ const appRoutes:Routes=[
   },
   {
     path:"addsecurity",component:AddSecurityComponent
+  },
+  {
+    path:"viewEmployee",component:ViewdeleteEmployeeComponent
   }
 ]
 @NgModule({
@@ -33,7 +37,8 @@ const appRoutes:Routes=[
     AdminLoginComponent,
     EmployeeLoginComponent,
     NavbarComponent,
-    AddSecurityComponent
+    AddSecurityComponent,
+    ViewdeleteEmployeeComponent
   ],
   imports: [
     BrowserModule,
