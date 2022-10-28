@@ -9,9 +9,13 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http'
 import { RouterModule, Routes } from '@angular/router';
+import { EmployeeLoginComponent } from './employee-login/employee-login.component';
 const appRoutes:Routes=[
   {
-    path:"",component:AdminLoginComponent
+    path:"",component:EmployeeLoginComponent
+  },
+  {
+    path:"adminLogin",component:AdminLoginComponent
   },
   {
     path:"adminDashboard",component:AdminDashboardComponent
@@ -21,7 +25,8 @@ const appRoutes:Routes=[
   declarations: [
     AppComponent,
     AdminDashboardComponent,
-    AdminLoginComponent
+    AdminLoginComponent,
+    EmployeeLoginComponent
   ],
   imports: [
     BrowserModule,
