@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http'
 import { RouterModule, Routes } from '@angular/router';
 import { EmployeeLoginComponent } from './employee-login/employee-login.component';
+import { NavbarComponent } from './navbar/navbar.component';
 const appRoutes:Routes=[
   {
     path:"",component:EmployeeLoginComponent
@@ -26,7 +27,8 @@ const appRoutes:Routes=[
     AppComponent,
     AdminDashboardComponent,
     AdminLoginComponent,
-    EmployeeLoginComponent
+    EmployeeLoginComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
