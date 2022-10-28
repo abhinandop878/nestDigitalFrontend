@@ -1,0 +1,64 @@
+<app-navbar></app-navbar>
+<br>
+<div class="container">
+    <div class="row ">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3">
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Employee ID:</label>
+                    <input placeholder="Enter Employee ID"type="text" class="form-control" name="empId" [(ngModel)]="empId">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <br>
+                        <button class="btn btn-success" type="button"(click)="searchEmployeeData()">Search</button>
+                    </div>
+                </div>
+                <div *ngFor="let i of searchData">
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                        <label for="" class="form-label">Employee ID:</label>
+                        <input placeholder="Enter Employee ID"type="text" class="form-control" value="{{i.empId}}" [(ngModel)]="i.empId">
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                        <label for="" class="form-label">Name:</label>
+                        <input placeholder="Enter Name"type="text" class="form-control" value="{{i.name}}" [(ngModel)]="i.name">
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                        <label for="" class="form-label">Place:</label>
+                        <input placeholder="Enter Place"type="text" class="form-control" value="{{i.place}}" [(ngModel)]="i.place">
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                        <label for="" class="form-label">Blood Group:</label>
+                        <input placeholder="Enter Blood Group"type="text" class="form-control" value="{{i.bloodGroup}}" [(ngModel)]="i.bloodGroup">
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                        <label for="" class="form-label">Address:</label>
+                        <input placeholder="Enter Address"type="text" class="form-control" value="{{i.companyAddress}}" [(ngModel)]="i.companyAddress">
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                        <label for="" class="form-label">Desigination:</label>
+                        <input placeholder="Enter Desigination"type="text" class="form-control" value="{{i.desigination}}" [(ngModel)]="i.desigination">
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                        <label for="" class="form-label">Date of Birth:</label>
+                        <input placeholder="Enter Date of Birth"type="date"  class="form-control"id="" value="{{i.dob}}" [(ngModel)]="i.dob">
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                        <label for="" class="form-label">Company Email ID:</label>
+                       <input placeholder="Enter Company Email ID"type="email" name="companyEmail" id="" class="form-control" value="{{i.companyEmail}}"  [(ngModel)]="i.companyEmail">
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                        <label for="" class="form-label">Gender:</label>
+                        <input placeholder="Enter Desigination"type="text" class="form-control" value="{{i.gender}}"  [(ngModel)]="i.gender">
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <br>
+                            <button class="btn btn-success" type="button" (click)="updateSearchData()">Update</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
