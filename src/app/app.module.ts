@@ -13,6 +13,7 @@ import { EmployeeLoginComponent } from './employee-login/employee-login.componen
 import { NavbarComponent } from './navbar/navbar.component';
 import { AddSecurityComponent } from './add-security/add-security.component';
 import { ViewdeleteEmployeeComponent } from './viewdelete-employee/viewdelete-employee.component';
+import { ViewSecurityComponent } from './view-security/view-security.component';
 const appRoutes:Routes=[
   {
     path:"",component:EmployeeLoginComponent
@@ -28,6 +29,9 @@ const appRoutes:Routes=[
   },
   {
     path:"viewEmployee",component:ViewdeleteEmployeeComponent
+  },
+  {
+    path:"viewSecurity",component:ViewSecurityComponent
   }
 ]
 @NgModule({
@@ -38,7 +42,8 @@ const appRoutes:Routes=[
     EmployeeLoginComponent,
     NavbarComponent,
     AddSecurityComponent,
-    ViewdeleteEmployeeComponent
+    ViewdeleteEmployeeComponent,
+    ViewSecurityComponent
   ],
   imports: [
     BrowserModule,
