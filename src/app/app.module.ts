@@ -11,6 +11,7 @@ import {HttpClientModule} from '@angular/common/http'
 import { RouterModule, Routes } from '@angular/router';
 import { EmployeeLoginComponent } from './employee-login/employee-login.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AddSecurityComponent } from './add-security/add-security.component';
 const appRoutes:Routes=[
   {
     path:"",component:EmployeeLoginComponent
@@ -20,6 +21,9 @@ const appRoutes:Routes=[
   },
   {
     path:"adminDashboard",component:AdminDashboardComponent
+  },
+  {
+    path:"addsecurity",component:AddSecurityComponent
   }
 ]
 @NgModule({
@@ -28,7 +32,8 @@ const appRoutes:Routes=[
     AdminDashboardComponent,
     AdminLoginComponent,
     EmployeeLoginComponent,
-    NavbarComponent
+    NavbarComponent,
+    AddSecurityComponent
   ],
   imports: [
     BrowserModule,

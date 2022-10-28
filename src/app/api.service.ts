@@ -13,4 +13,7 @@ export class ApiService {
   addEmployee=(data:any)=>{
     return this.http.post("http://localhost:8080/addEmployee",data)
   }
+  addSecurity=(data:any)=>{
+    return this.http.post("http://localhost:8080/addSecurity",data)
+  }
 }
