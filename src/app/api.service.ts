@@ -58,4 +58,7 @@ export class ApiService {
   checkoutValidation=(data:any)=>{
     return this.http.post("http://localhost:8080/checkoutValidation",data)
   }
+  viewAllCheckInCheckOut=()=>{
+    return this.http.get("http://localhost:8080/viewAllEmployeeEntry")
+  }
 }
