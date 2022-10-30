@@ -21,6 +21,7 @@ export class EmployeeLoginComponent implements OnInit {
       if (res.length>0) {
         localStorage.setItem("Id",res[0].empId)
         localStorage.setItem("Name",res[0].name)
+        alert("Login Successfully")
         this.myrouter.navigate(["/employeeDashboard"])
       } else {
         alert("Invalid EmailID or Password !")

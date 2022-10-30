@@ -21,7 +21,8 @@ export class LoginSecurityComponent implements OnInit {
       if (res.length>0) {
         localStorage.setItem("securityID",res[0].securityId)
         localStorage.setItem("securityName",res[0].securityName)
-        this.myrouter.navigate(["/"])
+        alert("Login Successfully")
+        this.myrouter.navigate(["/securityProfile"])
       } else {
         alert("Invalid EmailID or Password !")
       }
