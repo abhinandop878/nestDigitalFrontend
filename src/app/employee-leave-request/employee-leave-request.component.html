@@ -1,0 +1,44 @@
+<app-empnavbar></app-empnavbar>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" >
+            <div class="row g-3">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">Leave Type:</label>
+                    <select name="leaveType" id="" class="form-control" [(ngModel)]="leaveType">
+                        <option value="Loss of Pay">Loss of Pay</option>
+                        <option value="Leave for Miscarriage">Leave for Miscarriage</option>
+                        <option value="General Leave">General Leave</option>
+                        <option value="General Leave Contract">General Leave Contract</option>
+                        <option value="Duty Leave">Duty Leave</option>
+                        <option value="Bereavement Leave">Bereavement Leave</option>
+                        <option value="Annual Leave">Annual Leave</option>
+                    </select>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">Reason:</label>
+                    <textarea placeholder="Enter Reason"name="reason" class="form-control"id="" cols="30" rows="10"[(ngModel)]="reason"></textarea>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">Duration:</label>
+                    <input placeholder="Enter Duration"type="text" class="form-control"name="duration" [(ngModel)]="duration">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Start Date:</label>
+                    <input placeholder="Enter Start Date"type="date" name="startDate" class="form-control"id=""[(ngModel)]="startDate">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">End Date:</label>
+                    <input placeholder="Enter End Date"type="date" name="endDate" class="form-control"id=""[(ngModel)]="endDate">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <br>
+                        <button class="btn btn-success" type="button" (click)="readLeaveRequest()">Apply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
