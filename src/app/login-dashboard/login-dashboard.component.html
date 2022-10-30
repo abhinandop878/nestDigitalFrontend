@@ -1,0 +1,41 @@
+<app-empnavbar></app-empnavbar>
+<br>
+<div class="container">
+    <div class="row">
+        <div *ngFor="let i of myData" class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" >
+            <div class="alert alert-success alert-dismissible fade show" role="alert" style="text-align: center;">
+                Welcome {{name}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div class="row g-3">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <h1><strong>Employee ID:</strong> {{i.empId}}</h1>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <h1><strong>Name:</strong> {{name}}</h1>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <h1><strong>Place:</strong> {{i.place}}</h1>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <h1><strong>Blood Group:</strong> {{i.bloodGroup}}</h1>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <h1><strong>Address:</strong> {{i.companyAddress}}</h1>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <h1><strong>Desigination:</strong> {{i.desigination}}</h1>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <h1><strong>Date of Birth:</strong> {{i.dob}}</h1>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <h1><strong>Company Email ID:</strong> {{i.companyEmail}}</h1>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <h1><strong>Gender:</strong> {{i.gender}}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
