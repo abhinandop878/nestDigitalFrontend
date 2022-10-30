@@ -40,4 +40,5 @@ export class ApiService {
   updateLeaveStatus=(data:any)=>{
     return this.http.post("http://localhost:8080/statusLeave",data)
   }
+  
 }
