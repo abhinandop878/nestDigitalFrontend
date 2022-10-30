@@ -26,6 +26,7 @@ export class ViewAllLeaveRequestComponent implements OnInit {
     this.myapi.updateLeaveStatus(data).subscribe((res)=>{
     })
     alert("Employee ID: "+leave_id+" Leave Request Rejected Successfully !")
+    this.fetchData()
   }
   approvedLeave=(leave_id:any)=>{
     let data={
@@ -35,6 +36,7 @@ export class ViewAllLeaveRequestComponent implements OnInit {
     this.myapi.updateLeaveStatus(data).subscribe((res)=>{
     })
     alert("Employee ID: "+leave_id+" Leave Request Approved Successfully !")
+    this.fetchData()
   }
   leaveData:any=[]
   ngOnInit(): void {

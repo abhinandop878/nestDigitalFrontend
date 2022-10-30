@@ -15,6 +15,7 @@
                     <th scope="col">Start Date</th>
                     <th scope="col">End Date</th>
                     <th scope="col">Duration</th>
+                    <th scope="col">Status</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -26,7 +27,22 @@
                     <td>{{i.start_date}}</td>
                     <td>{{i.end_date}}</td>
                     <td>{{i.duration}}</td>
-                    <td><button class="btn btn-danger"(click)="rejectLeave(i.leave_id)">Reject</button></td>
+                    <td *ngIf="i.status==0">
+                        <div class="alert alert-warning" role="alert">
+                            Pending
+                        </div>
+                    </td>
+                    <td *ngIf="i.status==1">
+                        <div class="alert alert-success" role="alert">
+                            Approved
+                        </div>
+                    </td>
+                    <td *ngIf="i.status==-1">
+                        <div class="alert alert-danger" role="alert">
+                            Rejected
+                        </div>
+                    </td>
+                    <td><button class="btn btn-danger"  (click)="rejectLeave(i.leave_id)">Reject</button></td>
                     <td><button class="btn btn-success"(click)="approvedLeave(i.leave_id)">Approved</button></td>
                   </tr>
                 </tbody>
