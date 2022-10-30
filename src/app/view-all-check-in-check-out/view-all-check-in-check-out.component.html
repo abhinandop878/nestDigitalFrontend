@@ -1,0 +1,38 @@
+<app-security-navbar></app-security-navbar>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div *ngIf="status then showData else loadingScreen"></div>
+            <ng-template #showData>
+              <table class="table">
+                <thead>
+                  <tr >
+                    <th scope="col">Security Id</th>
+                    <th scope="col">Security Name</th>
+                    <th scope="col">Employee ID</th>
+                    <th scope="col">Employee Name</th>
+                    <th scope="col">CheckIn</th>
+                    <th scope="col">CheckOut</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let i of checkData">
+                    <td>{{i.security_id}}</td>
+                    <td>{{i.security_name}}</td>
+                    <td>{{i.entry_id}}</td>
+                    <td>{{i.name}}</td>
+                    <td>{{i.check_in}}</td>
+                    <td>{{i.check_out}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </ng-template>
+            <ng-template #loadingScreen>
+                <div class="spinner-border text-success" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </ng-template>
+        </div>
+    </div>
+</div>
