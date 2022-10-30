@@ -21,6 +21,7 @@ import { LoginDashboardComponent } from './login-dashboard/login-dashboard.compo
 import { EmpnavbarComponent } from './empnavbar/empnavbar.component';
 import { EmployeeLeaveRequestComponent } from './employee-leave-request/employee-leave-request.component';
 import { ViewLeaveRequestComponent } from './view-leave-request/view-leave-request.component';
+import { LoginSecurityComponent } from './login-security/login-security.component';
 const appRoutes:Routes=[
   {
     path:"",component:EmployeeLoginComponent
@@ -57,6 +58,9 @@ const appRoutes:Routes=[
   },
   {
     path:"leaveStatus",component:ViewLeaveRequestComponent
+  },
+  {
+    path:"securityLogin",component:LoginSecurityComponent
   }
 ]
 @NgModule({
@@ -75,7 +79,8 @@ const appRoutes:Routes=[
     LoginDashboardComponent,
     EmpnavbarComponent,
     EmployeeLeaveRequestComponent,
-    ViewLeaveRequestComponent
+    ViewLeaveRequestComponent,
+    LoginSecurityComponent
   ],
   imports: [
     BrowserModule,

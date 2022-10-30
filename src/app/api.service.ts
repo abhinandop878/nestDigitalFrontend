@@ -46,4 +46,7 @@ export class ApiService {
   viewEmployeeLeaveRequest=(data:any)=>{
     return this.http.post("http://localhost:8080/viewLeaveRequest",data)
   }
+  securityLogin=(data:any)=>{
+    return this.http.post("http://localhost:8080/securityLogin",data)
+  }
 }

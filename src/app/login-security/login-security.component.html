@@ -1,6 +1,6 @@
 <h1 style="text-align: center;"><span style="color: navy;"><Strong>NeST </Strong></span> <span style="color: black;"><strong>DIGITAL</strong></span></h1>
 <br>
-<h2 style="text-align: center;color: orange;">Employee Login</h2>
+<h2 style="text-align: center;color: orange;">Security Login</h2>
 <br>
 <div class="container">
     <div class="row">
@@ -8,23 +8,23 @@
             <div class="row g-3">
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form-label">Email ID:</label>
-                    <input placeholder="Enter your Email ID" type="text" class="form-control" name="companyEmail" [(ngModel)]="companyEmail">
+                    <input placeholder="Enter your Email ID" type="text" class="form-control" name="securityEmail" [(ngModel)]="securityEmail">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form-label">Password:</label>
-                    <input placeholder="Enter your Password"type="password" name="password" id="" class="form-control" [(ngModel)]="password">
+                    <input placeholder="Enter your Password"type="password" name="securityPassword" id="" class="form-control" [(ngModel)]="securityPassword">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <div class="d-grid gap-2 col-6 mx-auto">
                         <br>
-                        <button class="btn btn-success" type="button" (click)="readEmployeeLogin()">Login</button>
+                        <button class="btn btn-success" type="button" (click)="readSecurityLogin()">Login</button>
                     </div>
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <a routerLink="/adminLogin">Admin Login</a>
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <a routerLink="/securityLogin">Security Login</a>
+                    <a routerLink="/">Employee Login</a>
                 </div>
             </div>
         </div>
