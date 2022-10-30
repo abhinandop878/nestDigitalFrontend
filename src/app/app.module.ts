@@ -24,6 +24,7 @@ import { ViewLeaveRequestComponent } from './view-leave-request/view-leave-reque
 import { LoginSecurityComponent } from './login-security/login-security.component';
 import { SecurityProfileComponent } from './security-profile/security-profile.component';
 import { SecurityNavbarComponent } from './security-navbar/security-navbar.component';
+import { CheckoutInAndOutComponent } from './checkout-in-and-out/checkout-in-and-out.component';
 const appRoutes:Routes=[
   {
     path:"",component:EmployeeLoginComponent
@@ -66,6 +67,9 @@ const appRoutes:Routes=[
   },
   {
     path:"securityProfile",component:SecurityProfileComponent
+  },
+  {
+    path:"checkInCheckOut",component:CheckoutInAndOutComponent
   }
 ]
 @NgModule({
@@ -87,7 +91,8 @@ const appRoutes:Routes=[
     ViewLeaveRequestComponent,
     LoginSecurityComponent,
     SecurityProfileComponent,
-    SecurityNavbarComponent
+    SecurityNavbarComponent,
+    CheckoutInAndOutComponent
   ],
   imports: [
     BrowserModule,
