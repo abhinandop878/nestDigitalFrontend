@@ -1,0 +1,42 @@
+<app-navbar></app-navbar>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div *ngIf="statusL then showData else loadingScreen"></div>
+            <ng-template #showData>
+              <table class="table">
+                <thead>
+                  <tr >
+                    <th scope="col">Employee Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Leave Type</th>
+                    <th scope="col">Reason</th>
+                    <th scope="col">Start Date</th>
+                    <th scope="col">End Date</th>
+                    <th scope="col">Duration</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let i of leaveData">
+                    <td>{{i.leave_id}}</td>
+                    <td>{{i.name}}</td>
+                    <td>{{i.leave_type}}</td>
+                    <td>{{i.reason}}</td>
+                    <td>{{i.start_date}}</td>
+                    <td>{{i.end_date}}</td>
+                    <td>{{i.duration}}</td>
+                    <td><button class="btn btn-danger"(click)="rejectLeave(i.leave_id)">Reject</button></td>
+                    <td><button class="btn btn-success"(click)="approvedLeave(i.leave_id)">Approved</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </ng-template>
+            <ng-template #loadingScreen>
+                <div class="spinner-border text-success" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </ng-template>
+        </div>
+    </div>
+</div>
