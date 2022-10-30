@@ -49,4 +49,13 @@ export class ApiService {
   securityLogin=(data:any)=>{
     return this.http.post("http://localhost:8080/securityLogin",data)
   }
+  employeeCheckIn=(data:any)=>{
+    return this.http.post("http://localhost:8080/addEmployeeEntry",data)
+  }
+  employeeCheckOut=(data:any)=>{
+    return this.http.post("http://localhost:8080/checkoutEmployeeEntry",data)
+  }
+  checkoutValidation=(data:any)=>{
+    return this.http.post("http://localhost:8080/checkoutValidation",data)
+  }
 }

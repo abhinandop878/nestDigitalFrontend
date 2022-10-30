@@ -15,9 +15,14 @@ export class SearchSecurityComponent implements OnInit {
     let data={
       "securityId":this.securityId
     }
-    this.myapi.searchSecurity(data).subscribe((res)=>{
-      this.searchData=res
-      this.status=true
+    this.myapi.searchSecurity(data).subscribe((res:any)=>{
+      if (res.length>0) {
+        this.searchData=res
+        this.status=true
+      } else {
+        alert("Invalid Security ID !")
+        this.status=false
+      }
     })
     this.securityId=""
   }

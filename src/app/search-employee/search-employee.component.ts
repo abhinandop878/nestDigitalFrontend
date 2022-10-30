@@ -15,10 +15,16 @@ export class SearchEmployeeComponent implements OnInit {
     let data={
       "empId":this.empId
     }
-    this.myapi.searchEmployee(data).subscribe((res)=>{
-      this.searchData=res
-      this.status=true
+    this.myapi.searchEmployee(data).subscribe((res:any)=>{
+      if (res.length>0) {
+        this.searchData=res
+        this.status=true
+      } else {
+        alert("Invalid Employee ID !")
+        this.status=false
+      }
     })
+    this.empId=""
   }
   updateSearchData=()=>{
     this.myapi.updateEmployee(this.searchData[0]).subscribe((res)=>{
