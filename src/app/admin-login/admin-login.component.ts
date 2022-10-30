@@ -17,6 +17,7 @@ export class AdminLoginComponent implements OnInit {
       "password":this.password
     }
     if (this.emailId=="Admin"&&this.password=="1234") {
+      alert("Login Successfully")
       this.myrouter.navigate(["/adminDashboard"])
     } else {
       alert("Invalid emailId or Password")
