@@ -10,12 +10,14 @@ export class SearchEmployeeComponent implements OnInit {
 
   constructor(private myapi:ApiService) { }
   empId=""
+  status:boolean=false
   searchEmployeeData=()=>{
     let data={
       "empId":this.empId
     }
     this.myapi.searchEmployee(data).subscribe((res)=>{
       this.searchData=res
+      this.status=true
     })
   }
   updateSearchData=()=>{
